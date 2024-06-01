@@ -1,0 +1,25 @@
+.products-container {
+  padding: 20px;
+  border-radius: 10px;
+  background-image: linear-gradient(100deg, white, #c1908b);
+  height: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.products-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: white;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.products-container:hover::before {
+  transform: rotate(2deg) translateX(-10px) translateY(10px);
+}
